@@ -5,7 +5,7 @@ import { Box, Typography, Button } from "@mui/material";
 import { KeyboardArrowDown } from "@mui/icons-material";
 import { KeyboardArrowRight } from "@mui/icons-material";
 import aboutus1 from "../assets/aboutus1.png";
-import aboutus2 from "../assets/aboutus2.png";
+
 
 const Aboutus = () => {
   return (
@@ -116,53 +116,66 @@ const Aboutus = () => {
           </Box>
 
           {/* Second Content Block with Image */}
-          <Box
-            sx={{
-              width: { xs: "100%", md: "50%" },
-              padding: { xs: "0", md: "20px" },
-            }}
-          >
-            <Box sx={{ display: { xs: "none", md: "block" } }}>
-              <img 
-                src={aboutus1} 
-                style={{ 
-                  height: "300px", 
-                  width: "100%", 
-                  maxWidth: "350px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                  marginBottom: "20px"
-                }} 
-                alt="About travelsgroup"
-              />
-            </Box>
-            
-            <Typography
-              paragraph
-              sx={{
-                fontSize: { xs: "1.1rem", md: "1.2rem" },
-                lineHeight: "1.8",
-                color: "#555555",
-              }}
-            >
-              Our comprehensive services are designed to help you effortlessly
-              navigate the ever-changing travel landscape. We provide personalized
-              support to streamline travel management, reduce costs, and enhance the
-              entire journey of employees and clients.
-            </Typography>
-          </Box>
+          
+<Box
+  sx={{
+    width: { xs: "100%", md: "50%" },
+    padding: { xs: "0", md: "20px" },
+    textAlign: { xs: "center", md: "left" }, // Controls text alignment
+    margin: "0 auto", // Center the container on all screens
+    maxWidth: "350px", // Shared max-width for image + text
+  }}
+>
+  {/* Image (hidden on xs/sm, visible on md+) */}
+  <Box sx={{ display: { xs: "none", md: "block" }, mb: 2 }}>
+    <img
+      src={aboutus1}
+      style={{
+        width: "100%",       // Full width of parent (350px max)
+        height: "300px",     // Fixed height
+        objectFit: "cover",   // Prevent stretching
+        borderRadius: "8px",
+      }}
+      alt="About travelsgroup"
+    />
+  </Box>
+
+  {/* Text */}
+  <Typography
+    paragraph
+    sx={{
+      fontSize: { xs: "1.1rem", md: "1.2rem" },
+      lineHeight: "1.8",
+      color: "#555555",
+      width: "100%",          // Matches image width
+      textAlign: { xs: "center", md: "left" }, // Left-align on desktop
+    }}
+  >
+    Our comprehensive services are designed to help you effortlessly
+    navigate the ever-changing travel landscape. We provide personalized
+    support to streamline travel management, reduce costs, and enhance the
+    entire journey of employees and clients.
+
+    Whether you are a business looking to optimize travel operations or a traveler eager to explore 
+    new destinations, travels.com is a reliable partner. By combining innovative technology, data-driven insights, and empathetic services, we are 
+    committed to empowering you to unlock new possibilities and thrive in a dynamic world of travel.
+  </Typography>
+</Box>
+
+
         </Box>
       </Box>
 
       {/* Full Width Bottom Image */}
-      <Box sx={{ 
+      {/* <Box sx={{ 
         width: "100%", 
         display: "flex", 
         justifyContent: "center",
         // padding: { xs: "20px", md: "40px" },
-          padding: { xs: "0 20px 20px", md: "0 40px 40px" },    
+          padding: { xs: "0 20px 20px", md: "0 40px 90px" },    
  
-        marginTop: "-20px" 
+        // marginTop: "-20px" 
+           
       
       }}>
         <img 
@@ -170,12 +183,13 @@ const Aboutus = () => {
           style={{ 
             height: "400px", 
             width: "100%", 
-            maxWidth: "950px",
-            borderRadius: "8px"
+            // maxWidth: "950px",
+            borderRadius: "8px",
+       
           }} 
           alt="Travel experiences"
         />
-      </Box>
+      </Box> */}
 
       {/* CSS for bouncing arrow animation */}
       <style jsx global>{`

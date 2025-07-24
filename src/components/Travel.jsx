@@ -129,6 +129,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { Box } from "@mui/system";
 import Aboutus from "./Aboutus";
+import OurPillars from "./OurPillars";
 
 const Travel = () => {
   const theme = useTheme();
@@ -325,6 +326,7 @@ const Travel = () => {
       />
 
       <Aboutus />
+      <OurPillars/>
     </>
   );
 };
