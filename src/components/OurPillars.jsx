@@ -384,7 +384,8 @@ const OurPillars = () => {
             flexDirection: "column",
           
             margin: { xs: "0 auto", md: "0" },
-            marginLeft:{md:'300px'}
+            marginLeft:{md:'300px'},
+           
           }}
         >
           <Typography
@@ -406,6 +407,8 @@ const OurPillars = () => {
         </Box>
        
       </Box>
+
+ 
     </>
   );
 };
