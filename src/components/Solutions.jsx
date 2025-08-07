@@ -108,6 +108,9 @@ const Solutions = () => {
   }, []);
 
   return (
+    <>
+    
+    
     <Box
       sx={{
         width: "100%",
@@ -121,29 +124,7 @@ const Solutions = () => {
         alignItems: 'center'
       }}
     >
-      {/* Image Box */}
-      {/* <Box 
-      ref={imageRef}
-      sx={{
-        width: { xs: '100%', sm: '80%', md: '60%' },
-        // order: { xs: 2, md: 1 }
-        
-      }}>
-        <img
-          src={solution}
-          style={{
-            width: '100%',
-            height: { xs: '300px', md: '500px' },
-            objectFit: 'cover',
-            borderRadius: { xs: '8px', md: '0' },
-             transition: 'transform 0.3s ease-out',
-            transform: `scale(${zoom})`,
-            willChange: 'transform'
-          }}
-          alt="Travel solutions"
-        />
-      </Box> */}
-
+     
       <Box 
   ref={imageRef}
   sx={{
@@ -222,7 +203,11 @@ const Solutions = () => {
           Contact Us
         </Button>
       </Box>
+     
     </Box>
+
+     
+      </>
   );
 };
 
